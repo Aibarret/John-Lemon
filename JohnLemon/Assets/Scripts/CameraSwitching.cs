@@ -26,6 +26,11 @@ public class CameraSwitching : MonoBehaviour
                 current = camPoints[0];
                 current.SetActive(true);
                 break;
+            case "OutsideDoor":
+                current.SetActive(false);
+                current = camPoints[2];
+                current.SetActive(true);
+                break;
             default:
                 break;
         }
