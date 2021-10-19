@@ -30,8 +30,8 @@ public class PlayerMovement : MonoBehaviour
         float turn = Input.GetAxis("Turn") * turnSpeed;
         float walk = Input.GetAxis("Walk") * speed;
 
-        m_Movement.Set(walk, 0f, turn);
-        m_Movement.Normalize();
+        //m_Movement.Set(walk, 0f, turn);
+        //m_Movement.Normalize();
 
         bool hasHorizontalInput = !Mathf.Approximately(turn, 0f);
         bool hasVerticalInput = !Mathf.Approximately(walk, 0f);
@@ -74,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (walk != 0)
         {
+            m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
             m_Rigidbody.velocity = transform.forward * walk;
         }
     }
