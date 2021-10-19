@@ -7,6 +7,7 @@ public class Observer : MonoBehaviour
     public Transform player;
     bool m_isPlayerInRange;
     public GameEnding gameEnding;
+    public GameObject parent;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -37,7 +38,7 @@ public class Observer : MonoBehaviour
             {
                 if (raycastHit.collider.transform == player)
                 {
-                    gameEnding.CaughtPlayer();
+                    parent.GetComponent<Chaser>().followPoint(raycastHit.point);
                 }
             }
         }

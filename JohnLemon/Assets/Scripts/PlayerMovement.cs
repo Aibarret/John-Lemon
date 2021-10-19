@@ -30,25 +30,6 @@ public class PlayerMovement : MonoBehaviour
         float turn = Input.GetAxis("Turn") * turnSpeed;
         float walk = Input.GetAxis("Walk") * speed;
 
-
-        // Conditional that stops the player from moving and turning at the same time 
-        //if (turn != 0 && walk != 0)
-        //{
-
-        //}
-        //else if (turn != 0)
-        //{
-        //    m_EulerAngleVelocity = new Vector3(0, turn, 0);
-
-        //    Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.deltaTime);
-        //    m_Rigidbody.MoveRotation(m_Rigidbody.rotation * deltaRotation);
-        //}
-        //else if (walk != 0)
-        //{
-        //    m_Rigidbody.velocity = transform.forward * walk;
-        //}
-
-
         m_Movement.Set(walk, 0f, turn);
         m_Movement.Normalize();
 
@@ -84,14 +65,14 @@ public class PlayerMovement : MonoBehaviour
 
 
         // Conditional that stops the player from moving and turning at the same time 
-        if (turn != 0 && walk == 0)
+        if (turn != 0)
         {
             m_EulerAngleVelocity = new Vector3(0, turn, 0);
 
             Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.deltaTime);
             m_Rigidbody.MoveRotation(m_Rigidbody.rotation * deltaRotation);
         }
-        else if (walk != 0 && turn == 0)
+        else if (walk != 0)
         {
             m_Rigidbody.velocity = transform.forward * walk;
         }
