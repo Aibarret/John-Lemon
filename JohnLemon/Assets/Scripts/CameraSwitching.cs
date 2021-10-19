@@ -6,8 +6,7 @@ public class CameraSwitching : MonoBehaviour
 {
     public GameObject current;
     public GameObject[] camPoints;
-    
-
+   
     private void Start()
     {
         current.SetActive(true);
