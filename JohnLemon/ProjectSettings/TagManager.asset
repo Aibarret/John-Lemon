@@ -7,6 +7,7 @@ TagManager:
   - HallwayCorner
   - Start
   - OutsideDoor
+  - Room
   layers:
   - Default
   - TransparentFX

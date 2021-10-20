@@ -31,6 +31,11 @@ public class CameraSwitching : MonoBehaviour
                 current = camPoints[2];
                 current.SetActive(true);
                 break;
+            case "Room":
+                current.SetActive(false);
+                current = camPoints[3];
+                current.SetActive(true);
+                break;
             default:
                 break;
         }
