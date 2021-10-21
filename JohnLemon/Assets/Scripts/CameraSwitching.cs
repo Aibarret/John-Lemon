@@ -36,6 +36,11 @@ public class CameraSwitching : MonoBehaviour
                 current = camPoints[3];
                 current.SetActive(true);
                 break;
+            case "OuterRingEntrance":
+                current.SetActive(false);
+                current = camPoints[4];
+                current.SetActive(true);
+                break;
             default:
                 break;
         }

@@ -8,6 +8,7 @@ TagManager:
   - Start
   - OutsideDoor
   - Room
+  - OuterRingEntrance
   layers:
   - Default
   - TransparentFX
