@@ -9,6 +9,20 @@ TagManager:
   - OutsideDoor
   - Room
   - OuterRingEntrance
+  - OuterRingLeftCorner
+  - InnerRingEntrance
+  - IRLCorner
+  - IRLStraight
+  - IRRCorner
+  - IRRStraight
+  - IREnd
+  - ORRCorner
+  - ORRStraight
+  - ORREnd
+  - ORLStraight
+  - LRoom
+  - RRoom
+  - RRoom2
   layers:
   - Default
   - TransparentFX
